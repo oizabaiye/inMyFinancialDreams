@@ -20,31 +20,58 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
 div.formWrapper {
   width: 400px;
   border: 1px solid black;
   margin: 0 auto;
+  padding: 5px;
 }
 
-#budget {
+.formRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.budget {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   border: 1px solid white;
 }
 
+.currentIncome {
+  width: 100%;
+  text-align: center;
+}
+
 label {
-  width: 80%;
   font-size: 0.8rem;
   display: block;
+  
 }
 
 input {
-  width: 70px;
+  width: 120px;
   margin: 5px;
   font-size: 0.65rem;
+  flex: 1;
 }
 
-#submit {
-  width: 70%;
+.submit {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.submit > #submitButton {
+  width: 100%;
+  padding: 10px;
 }
