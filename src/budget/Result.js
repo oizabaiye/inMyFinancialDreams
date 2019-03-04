@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
+import './Result.css';
+
+// upon submit in Budget, import props of expenses and currentincome
 
 class Result extends Component {
   render(){
     return (
-        <div>
-          <label className="balance"> Your balance is:
-            <input type="text" name="balance" className="balanceValue" value="" />
-          </label>
-        </div>
+      <div className="advice">
+        {this.props.totalExpense != '' ? <p>You need $ {this.props.totalExpense} to finance your dream lifestyle. Your current income is ${this.props.currentIncome}</p> : null}
+      </div>
+          
     )
   }
 }
-
-// import React from 'react';
-
-// const sumOfValues = () => {
-//   return <p>Your lifestyle costs xyz! This leaves you a balance of abc!</p>
-// }
-
-// export default Summation;
 
 export default Result;

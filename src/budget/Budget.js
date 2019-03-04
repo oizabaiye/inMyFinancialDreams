@@ -7,7 +7,6 @@ class Budget extends React.Component {
   constructor(props){
     super(props);
 
-
     this.state = {
       housingUtilities: "",
       phoneInternet: "",
@@ -29,36 +28,25 @@ class Budget extends React.Component {
       miscellaneous: "",
       savingsInvestment: "",
       totalExpense: '',
+      currentIncome: ''
     }
   }
-
+//on form submit, collect all input values and add them. subtract current income from the sum 
   handleSubmit = (event) => {
     event.preventDefault();
     const stateClone = {...this.state};
-    const totalValues = Object.values(stateClone).reduce((acc, value) => {
+    let totalValues = Object.values(stateClone).reduce((acc, value) => {
       return value !== undefined ? acc + Number(value) : null;
     }, 0) 
-    return totalValues
-    // let totalExpenseClone = {...this.state.totalExpense};
-    // totalExpenseClone = totalValues;
-    // console.log(totalExpenseClone)
+    totalValues = totalValues - this.state.currentIncome;
+    this.setState({
+      totalExpense: totalValues
+    })
   } 
-
-
-
-
 
   //stateclone copies this.state into a new object
 
-    // collect all the values of set state in an array
-    // add them up using reduce and const total
-    // export this to Result.js, also export Income to Result.js
-    //in Result.js, delete the total from income
-    //if result <= 0, change background to red and display advice to cut down largest expenses or earn more money
-    //if result >= 0, change background to green and display advice saying good job, you're not in the red. You can always save more though
-    
-
-  // put in regex to make user only add numbers or 0
+//as user inputs, change the value to a string
   handleChange = (event) =>{
     this.setState({
       [event.target.name]: parseInt(event.target.value, 10) 
@@ -69,11 +57,12 @@ class Budget extends React.Component {
     return (
       <div className="formWrapper">
         <React.Fragment>
-          <Income />
 
           <h3>My expense wishlist</h3>
 
           <form onSubmit={this.handleSubmit} className="budget">
+            <Income handleChange={this.handleChange} currentIncome={this.state.currentIncome} />
+
             <div className="formRow">
               <label> Housing & Utilities:
                 <input type="number" name="housingUtilities" value={this.state.housingUtilities} onChange={this.handleChange}/>
@@ -168,14 +157,12 @@ class Budget extends React.Component {
               <input type="submit" value="Submit" id="submitButton" />
             </div>
           </form>
-          <Result handleSubmit={this.handleSubmit} />
+          <Result totalExpense={this.state.totalExpense} currentIncome={this.state.currentIncome}/>
         </React.Fragment>
         
       </div>
     )
   }
 }
-
-// assume one user for now. assume they are logged in. what would the app look like for them?
 
 export default Budget;

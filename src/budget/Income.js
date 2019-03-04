@@ -1,24 +1,12 @@
 import React, { Component } from 'react';
 
 class Income extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      currentIncome: ""
-    }
-  }
-
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: parseInt(event.target.value, 10)
-    })
-  }
 
   render() {
     return (
       <div>
         <label className="currentIncome"> Current Income: 
-          <input type="number" name="currentIncome" id="income" value={this.state.currentIncome} onChange={this.handleChange} />
+          <input type="number" name="currentIncome" id="currenIncome" value={this.props.currentIncome} onChange={this.props.handleChange} />
         </label>
       </div>
     )
