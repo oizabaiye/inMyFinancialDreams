@@ -18,7 +18,7 @@ class Income extends Component {
     return (
       <div>
         <label className="currentIncome"> Current Income: 
-          <input type="number" name="currentIncome" value={this.state.currentIncome} onChange={this.handleChange} />
+          <input type="number" name="currentIncome" id="income" value={this.state.currentIncome} onChange={this.handleChange} />
         </label>
       </div>
     )

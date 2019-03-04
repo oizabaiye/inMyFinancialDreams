@@ -3,16 +3,21 @@ import React, { Component } from 'react';
 class Result extends Component {
   render(){
     return (
-      <React.Fragment>
-        <div className="balance">
-          <p>You're almost out</p>
+        <div>
+          <label className="balance"> Your balance is:
+            <input type="text" name="balance" className="balanceValue" value="" />
+          </label>
         </div>
-        <div className="advice">
-          <p>You should save more!</p>
-        </div>
-      </React.Fragment>
     )
   }
 }
+
+// import React from 'react';
+
+// const sumOfValues = () => {
+//   return <p>Your lifestyle costs xyz! This leaves you a balance of abc!</p>
+// }
+
+// export default Summation;
 
 export default Result;

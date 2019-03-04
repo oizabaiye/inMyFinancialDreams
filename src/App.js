@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import Budget from './budget/Budget';
-import Result from './budget/Result';
+import Footer from './Footer';
 
 class App extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Budget />
-        <Result />
+        <Footer />
       </div>
     );
   }

@@ -9,21 +9,38 @@ html {
 }
 
 body {
-  background: #f25e5e;
   color:#171d14;
+  padding: 5px;
   font-family: 'Karla', sans-serif;
+  background: linear-gradient(45deg, rgba(38, 77, 193, 0.85) 50%, rgb(242, 94, 94, 0.9) 50%);
 }
+
 
 h1 {
   font-family: 'Old Standard TT', serif;
-  font-size: 2rem;
+  font-size: 2.3rem;
+  padding-top: 5%;
   text-align: center;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 50px;
+  
 }
 
 h3 {
-  margin: 0;
+  margin-top: 20px;
   text-align: center;
   font-size: 1rem;
+  border-bottom: 1px solid #ffd166;
+  padding: 10px 0;
+}
+
+Header {
+  margin: 0 auto;
 }
 
 div.formWrapper {
@@ -31,6 +48,7 @@ div.formWrapper {
   border: 1px solid black;
   margin: 0 auto;
   padding: 5px;
+  background: #f8fbfb;
 }
 
 .formRow {
@@ -46,22 +64,29 @@ div.formWrapper {
 }
 
 .currentIncome {
+  margin-top: 10px;
   width: 100%;
   text-align: center;
+  font-size: 1rem;
 }
 
 label {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   display: block;
   
 }
 
 input {
   width: 120px;
-  margin: 5px;
-  font-size: 0.65rem;
+  margin: 7px 10px;
+  font-size: 0.8rem;
   flex: 1;
 }
+
+input:hover {
+  background: greenyellow;
+}
+
 
 .submit {
   width: 50%;
@@ -74,10 +99,77 @@ input {
 .submit > #submitButton {
   width: 100%;
   padding: 10px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  background: #ffd166;
+  border: none;
+  color: #171d14;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+}
+
+#submitButton:hover {
+  background: green;
+  color: #f8fbfb;
+  border: none;
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+}
+
+.balanceValue {
+  background: none;
+  padding: 5px 4px;
+  margin-left: 10px;
 }
 
 /* solution to removing arrow in inputs, found on StackOverflow. Doesn't work in Firefox */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+}
+
+.footering {
+    text-align: center;
+    width: 100%;
+    margin-top: 12%;
+    margin-bottom: 15px;
+    font-family: 'Old Standard TT', serif;
+
+    p {
+        font-size: 1rem;
+
+    }
+    .fas {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 776px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  div.formWrapper {
+    width: 500px;
+  }
+  input {
+    width: 150px;
+    margin: 7px 28px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
 }
