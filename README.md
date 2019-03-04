@@ -14,3 +14,4 @@ View Live at https://inmyfinancialdreams.firebaseapp.com
 - keyboard tabbing
 - description of app
 - styling of result section
+- clear state upon submit (note that currentIncome is still used after submit)
