@@ -41,7 +41,7 @@ class Budget extends React.Component {
     totalValues = totalValues - this.state.currentIncome;
     this.setState({
       totalExpense: totalValues
-    })
+    });
   } 
 
   //stateclone copies this.state into a new object
