@@ -11,6 +11,7 @@ View Live at https://inmyfinancialdreams.firebaseapp.com
 ##To be added
 
 - smooth scroll on submit
+- add debt financing & family in State
 - keyboard tabbing
 - description of app
 - styling of result section
