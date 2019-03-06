@@ -15,3 +15,6 @@ View Live at https://inmyfinancialdreams.firebaseapp.com
 - description of app
 - styling of result section
 - clear state upon submit (note that currentIncome is still used after submit)
+- clarify monthly vs annual
+- add dropdown menu for selecting currency
+- possible use of api?
