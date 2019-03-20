@@ -39,8 +39,13 @@ header h1 {
   text-transform: capitalize;
   font-family: 'ZCOOL XiaoWei', serif;
   font-size: 5.5rem;
-
+  text-align: center;
 }
+
+.bills {
+  margin-top: 3%;
+}
+
 
 
 /* header h2 {
@@ -168,15 +173,16 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-.footering {
+footer {
   text-align: center;
   width: 100%;
   margin-top: 120px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  padding: 1%;
   font-family: 'Karla', sans-serif;
 }
 
-.footering > p {
+footer > p {
   font-size: 1.2rem;
   }
 
