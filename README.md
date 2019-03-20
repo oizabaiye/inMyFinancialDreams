@@ -11,7 +11,11 @@ View Live at https://inmyfinancialdreams.firebaseapp.com
 ##To be added
 
 - smooth scroll on submit
+- add debt financing & family in State
 - keyboard tabbing
 - description of app
 - styling of result section
 - clear state upon submit (note that currentIncome is still used after submit)
+- clarify monthly vs annual
+- add dropdown menu for selecting currency
+- possible use of api?
