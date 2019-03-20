@@ -56,10 +56,9 @@ class Budget extends React.Component {
   render() {
 
     return (
-      <div className="formWrapper">
-        <React.Fragment>
-
-          <h3>My expense wishlist</h3>
+      <section className="calculator">
+        <div className="formWrapper">
+          <h3>My Dream Life Estimator</h3>
 
           <form onSubmit={this.handleSubmit} className="budget">
             <Income handleChange={this.handleChange} currentIncome={this.state.currentIncome} />
@@ -159,9 +158,9 @@ class Budget extends React.Component {
             </div>
           </form>
           <Result totalExpense={this.state.totalExpense} currentIncome={this.state.currentIncome}/>
-        </React.Fragment>
-        
-      </div>
+          
+        </div>
+      </section>
     )
   }
 }
