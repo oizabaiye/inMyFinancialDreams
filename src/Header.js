@@ -12,9 +12,9 @@ class Header extends Component {
             What would your ideal life look like? Use this expense
             calculator to find out. Then get to work making that $$$!
           </p>
-          <div className="bills">
+          {/* <div className="bills">
             <img src={svg}/>
-          </div>
+          </div> */}
         </div>
       </header>
     );
