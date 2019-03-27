@@ -4,15 +4,17 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-html {
-  font-size: 125%;
-}
 
 body {
-  color:#0A2463;
+  font-size: 125%;  
+  color:white;
   padding: 5px;
-  font-family: 'Karla', sans-serif;
-  background-image: linear-gradient(to right top, #e52515, #e56700, #d69800, #b9c400, #87eb12);
+  font-family: 'Fira Sans', sans-serif;
+  background-image: url(./assets/michael-mroczek-440382-unsplash.jpg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 header {
@@ -21,27 +23,31 @@ header {
 
 .headerWrapper {
   height: 100%;
-  padding-top: 10%;
+  padding-top: 8.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .headerWrapper > p {
-  font-size: 2rem;
-  width: 75%;
+  font-size: 3.5rem;
+  font-family: 'Amatic SC', cursive;
+  width: 70%;
   text-align: center;
-  color: #320D6D;
+  color: white;
   font-weight: 700;
+  line-height: 0.75;
 }
 
 header h1 {
   text-transform: capitalize;
-  font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 5.5rem;
+  font-family: 'Kalam', cursive;
+  font-style: italic;
+  font-size: 7rem;
   text-align: center;
   padding-right: 2%;
   padding-left: 2%;
+  margin-bottom: 1%;
 }
 
 .bills {
@@ -53,12 +59,11 @@ h3 {
   margin-bottom: 20px;
   margin-top: 0;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  /* border-bottom: 1px solid #01BAEF; */
   background: #320D6D;
-  padding: 30px 0;
-  font-family: 'ZCOOL XiaoWei', serif;
+  padding: 25px 0;
+  font-family: 'Amatic SC', cursive;
   color: white;
 }
 
@@ -99,7 +104,7 @@ div.income > .currentIncome {
   padding-bottom: 15px;
   width: 100%;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   display: block;
   border-top: none;
   font-weight: 700;
@@ -108,14 +113,14 @@ div.income > .currentIncome {
 
 
 .formRow label {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: block;
 }
 
 input[type="number"] {
   width: 210px;
   margin: 7px 16px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 2px;
   flex: 1;
 }
@@ -141,7 +146,7 @@ input:hover {
   border: none;
   color: #171d14;
   font-family: 'Karla', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-top: 3%;
 }
 
@@ -150,6 +155,7 @@ input:hover {
   border: 4px solid black;
   color: #320D6D;
 }
+
 
 .balance {
   display: flex;
@@ -174,7 +180,7 @@ footer {
   margin-top: 120px;
   margin-bottom: 6px;
   padding: 1%;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 footer > p {
@@ -183,7 +189,7 @@ footer > p {
 
 @media (max-width: 1240px) {
   header h1 {
-    font-size: 4rem;
+    font-size: 5.5rem;
   }
 
   .headerWrapper {
@@ -191,19 +197,19 @@ footer > p {
   }
 
   p.description {
-    font-size: 1.6rem;
+    font-size: 3rem;
   }
 
   div.formWrapper {
-    width: 80%;
+    width: 60%;
   }
 
   div.income > .currentIncome {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
   }
 
   .formRow label {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -215,7 +221,11 @@ footer > p {
   }
 
   header h1 {
-    font-size: 2.75rem;
+    font-size: 4rem;
+  }
+
+  div.formWrapper {
+    width: 70%;
   }
 
   .headerWrapper {
@@ -223,32 +233,39 @@ footer > p {
   }
 
   p.description {
-    font-size: 1.4rem;
+    font-size: 2.5rem;
   }
 
   h3 {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
 
+  .headerWrapper p {
+    width: auto;
+  }
 
-  input {
+  input[type="number"] {
     width: 120px;
-    margin: 7px 20px;
+    margin: 7px 16px;
+    font-size: 1rem;
+    padding: 1px;
   }
 
   div.income > .currentIncome {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .formRow label {
-    font-size: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .submit > #submitButton {
+    font-size: 1.1rem;
+
   }
 }
 
 @media (max-width: 600px) {
-  /* header h1 {
-    font-size: 2.2rem;
-  } */
 
   p.description {
     font-size: 1.2rem;
@@ -258,8 +275,12 @@ footer > p {
     width: 92%;
   }
 
+  .headerWrapper p {
+    font-size: 2rem;
+  }
+
   div.income > .currentIncome {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .currentIncome input {
@@ -272,7 +293,11 @@ footer > p {
   }
 
   p, label {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+
+  div.advice p {
+    font-size: 1.3rem;
   }
 
   input[type="number"] {
@@ -283,16 +308,18 @@ footer > p {
 }
 
 @media (max-width: 500px) {
-  header .headerWrapper {
-    align-items: left;
-  }
 
-  h1 {
-    text-align: left;
+  header h1 {
+    font-size: 3rem;
   }
 
   .formWrapper h3 {
-    font-size: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .headerWrapper p {
+    font-size: 1.5rem;
+    line-height: 0.5;
   }
 
  .currentIncome input {
@@ -300,11 +327,11 @@ footer > p {
   }
 
   .formRow input {
-    width: 90px;
-    margin: 7px 20px;
+    width: 80px;
+    margin: 5px 15px;
   }
 
   .formRow label {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }

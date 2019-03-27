@@ -6,7 +6,7 @@ class Income extends Component {
     return (
       <div className="income">
         <label className="currentIncome"> Current Income: 
-          <input type="number" name="currentIncome" id="currenIncome" value={this.props.currentIncome} onChange={this.props.handleChange} />
+          <input type="number" name="currentIncome" id="currenIncome" value={this.props.currentIncome} onChange={this.props.handleChange} required/>
         </label>
       </div>
     )
