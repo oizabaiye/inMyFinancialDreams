@@ -5,15 +5,21 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 div.advice {
-  border: 2px solid #0A2463;
+  border: 2px solid #320D6D;
   margin-top: 6%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1.6;
   scroll-behavior: smooth;
-  background: #0A2463;
+  background: #320D6D;
   padding: 5%;
   color: #FAFAFF;
+}
+
+@media (max-width: 900px) {
+  div.advice {
+    font-size: 1.2rem;
+  }
 }
