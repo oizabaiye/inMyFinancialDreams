@@ -12,4 +12,4 @@ View Live at https://inmyfinancialdreams.firebaseapp.com
 - keyboard tabbing
 - clarify monthly vs annual
 - add dropdown menu for selecting currency
-- possible use of user auth?
+
