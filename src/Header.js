@@ -6,12 +6,12 @@ class Header extends Component {
       <header>
         <div className="headerWrapper">
           <h1>in my financial dreams</h1>
-          <p className="description">
+          <h2>
             What would it cost to live your ideal life? 
-          </p>
-          <p className="description">
-            Use this budget calculator and find out
-          </p>
+          </h2>
+          <h2>
+            Find out with this <span className="monthly">monthly</span> budget calculator
+          </h2>
         </div>
       </header>
     );

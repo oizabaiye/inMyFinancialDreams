@@ -17,8 +17,9 @@ body {
   -o-background-size: cover;
 }
 
+/* header styles */
 header {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .headerWrapper {
@@ -29,21 +30,6 @@ header {
   align-items: center;
 }
 
-.headerWrapper > p {
-  font-size: 3.5rem;
-  font-family: 'Amatic SC', cursive;
-  width: 70%;
-  text-align: center;
-  color: white;
-  font-weight: 700;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* p.description {
-  line-height: 1.6;
-} */
-
 header h1 {
   text-transform: capitalize;
   font-family: 'Kalam', cursive;
@@ -52,9 +38,30 @@ header h1 {
   text-align: center;
   padding-right: 2%;
   padding-left: 2%;
-  /* margin-bottom: 5%; */
+
 }
 
+h2 {
+  font-size: 3.5rem;
+  font-family: 'Amatic SC', cursive;
+  width: 70%;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h2 > .monthly {
+  text-decoration: underline;
+}
+
+/* form styles */
+
+section.calculator {
+  width: 100vw;
+}
 
 h3 {
   margin-bottom: 20px;
@@ -68,10 +75,6 @@ h3 {
   color: white;
 }
 
-section.calculator {
-  width: 100vw;
-}
-
 div.formWrapper {
   width: 50%;
   border: 1px solid black; 
@@ -82,11 +85,6 @@ div.formWrapper {
   -moz-box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
   box-shadow: -1px -1px 5px 0px rgba(0,0,0,0.75);
   color: #320D6D; 
-}
-
-.formRow {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .budget {
@@ -110,7 +108,10 @@ div.income > .currentIncome {
   font-weight: 700;
 }
 
-
+.formRow {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .formRow label {
   font-size: 1.5rem;
@@ -125,10 +126,10 @@ input[type="number"] {
   flex: 1;
 }
 
-input:hover {
+input:hover,
+input:focus {
   background: #9BA2FF;
 }
-
 
 .submit {
   width: 50%;
@@ -138,19 +139,20 @@ input:hover {
   padding: 15px;
 }
 
-.submit > #submitButton {
+#submitButton {
   width: 100%;
   padding: 10px;
-  text-transform: uppercase;
+  text-transform: uppercase; 
   background: #9BA2FF;
   border: none;
   color: #171d14;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Fira Sans', sans-serif; 
   font-size: 1.5rem;
   margin-top: 3%;
 }
 
-#submitButton:hover {
+#submitButton:hover,
+#submitButton:focus {
   background: none;
   border: 4px solid black;
   color: #320D6D;
@@ -173,6 +175,8 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
+
+/* footer */
 
 footer {
   text-align: center;
@@ -201,7 +205,7 @@ footer > p {
     padding: 15px 0;
   }
 
-  p.description {
+  h2 {
     font-size: 2.5rem;
   }
 
@@ -232,7 +236,7 @@ footer > p {
     padding-top: 20vh;
   }
 
-  p.description {
+  h2 {
     font-size: 2rem;
   }
 
@@ -273,10 +277,6 @@ footer > p {
 
 @media (max-width: 600px) {
 
-  p.description {
-    font-size: 1.2rem;
-  }
-
   div.formWrapper {
     width: 92%;
   }
@@ -285,7 +285,7 @@ footer > p {
     padding-top: 15vh;
   }
 
-  .headerWrapper p {
+  h2 {
     font-size: 2rem;
   }
 
@@ -333,7 +333,7 @@ footer > p {
     font-size: 1.5rem;
   }
 
-  .headerWrapper p {
+  h2 {
     font-size: 1.3rem;
   }
 
@@ -354,17 +354,10 @@ footer > p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
   header h1 {
-    font-size: 2.6rem;
-  }
-
-  .headerWrapper {
-    padding-top: 10vh;
-  }
-
-  div.formWrapper {
-    margin-top: 4%;
+    font-size: 2.4rem;
+    margin-top: 0;
   }
 
   div.income > .currentIncome {

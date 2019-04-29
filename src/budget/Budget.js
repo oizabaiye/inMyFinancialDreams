@@ -25,7 +25,7 @@ class Budget extends React.Component {
       learning: "",
       electronics: "",
       emergencyFund: "",
-      miscellaneous: "",
+      debt: "",
       savingsInvestment: "",
       totalExpense: '',
       currentIncome: '',
@@ -274,6 +274,18 @@ class Budget extends React.Component {
                 />
               </label>
             </div>
+            <div className="formRow">
+            <label>
+              {" "}
+              Debt financing:
+              <input
+                type="number"
+                name="debt"
+                value={this.state.debt}
+                onChange={this.handleChange}
+              />
+            </label>
+          </div>           
             <div className="formRow">
               <label>
                 {" "}

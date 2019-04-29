@@ -8,8 +8,10 @@ View Live at https://inmyfinancialdreams.firebaseapp.com
 
 ##To be added
 
-- add debt financing & family in State
-- keyboard tabbing
-- clarify monthly vs annual
+- ~~add debt financing & family in State~~
+- ~~keyboard tabbing~~
+- ~~clarify monthly vs annual~~
+- dynamic calculation (no submit button req'd)
 - add dropdown menu for selecting currency
+- integration with google sheets api
 
