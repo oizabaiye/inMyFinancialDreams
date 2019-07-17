@@ -36,6 +36,8 @@ class Budget extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const stateClone = {...this.state};
+
+    //sum up the number values of user input
     let totalValues = Object.values(stateClone).reduce((acc, value) => {
       return value !== undefined ? acc + Number(value) : null;
     }, 0) 
@@ -46,9 +48,7 @@ class Budget extends React.Component {
     });
   } 
 
-  //stateclone copies this.state into a new object
-
-//as user inputs, change the value to a string
+//as user inputs, change the input to an integer
   handleChange = (event) =>{
     this.setState({
       [event.target.name]: parseInt(event.target.value, 10) 
@@ -71,7 +71,7 @@ class Budget extends React.Component {
 
             <div className="formRow">
               <label>
-                {" "}
+               
                 Housing & Utilities:
                 <input
                   type="number"
@@ -94,7 +94,6 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
                 Transportation:
                 <input
                   type="number"
@@ -106,7 +105,6 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
                 Groceries:
                 <input
                   type="number"
@@ -119,7 +117,7 @@ class Budget extends React.Component {
             <div className="formRow">
                
               <label>
-                {" "}
+                 
                 Eating Out:
                 <input
                   type="number"
@@ -132,7 +130,7 @@ class Budget extends React.Component {
             <div className="formRow">
                
               <label>
-                {" "}
+                 
                 Healthcare:
                 <input
                   type="number"
@@ -144,7 +142,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Fitness & Wellness:
                 <input
                   type="number"
@@ -156,7 +154,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Gifts/ Charity:
                 <input
                   type="number"
@@ -168,7 +166,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Family:
                 <input
                   type="number"
@@ -180,7 +178,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Travel/ Vacation:
                 <input
                   type="number"
@@ -192,7 +190,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Beauty & Grooming:
                 <input
                   type="number"
@@ -204,7 +202,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Home Supplies:
                 <input
                   type="number"
@@ -216,7 +214,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Clothing:
                 <input
                   type="number"
@@ -228,7 +226,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Entertainment:
                 <input
                   type="number"
@@ -240,7 +238,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Learning & Training:
                 <input
                   type="number"
@@ -252,7 +250,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Electronics:
                 <input
                   type="number"
@@ -264,7 +262,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Emergency Fund:
                 <input
                   type="number"
@@ -276,7 +274,7 @@ class Budget extends React.Component {
             </div>
             <div className="formRow">
             <label>
-              {" "}
+               
               Debt financing:
               <input
                 type="number"
@@ -288,7 +286,7 @@ class Budget extends React.Component {
           </div>           
             <div className="formRow">
               <label>
-                {" "}
+                 
                 Savings & Investments:
                 <input
                   type="number"

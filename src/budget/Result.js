@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Result.css';
 
-// upon submit in Budget, import props of expenses and currentincome
-
+//when total Expense has a value (handleSubmit() is called), return advice string.
 class Result extends Component {
   render(){
     return (
